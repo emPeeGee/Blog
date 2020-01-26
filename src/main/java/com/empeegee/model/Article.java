@@ -1,12 +1,21 @@
 package com.empeegee.model;
 
+import java.util.Date;
+
 public class Article {
     private int id;
     private String title;
     private String text;
-    private String date;
+    private Date date;
 
     public Article() {
+    }
+
+    public Article(int id, String title, String text, Date date) {
+        this.id = id;
+        this.title = title;
+        this.text = text;
+        this.date = date;
     }
 
     public int getId() {
@@ -33,11 +42,12 @@ public class Article {
         this.text = text;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
+
 }
