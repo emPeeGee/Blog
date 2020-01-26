@@ -1,4 +1,4 @@
-package com.empeegee;
+package com.empeegee.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -6,21 +6,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet(value = "/Home")
-public class Home extends HttpServlet {
-
+@WebServlet(value = "")
+public class IndexServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
+       // response.sendRedirect("views/index.jsp");
+        request.getRequestDispatcher("views/index.jsp").forward(request, response);
 
-        out.println("<h1>Home</h1>");
     }
 
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse response) throws ServletException, IOException {
-        doGet(req, response);
-    }
 }

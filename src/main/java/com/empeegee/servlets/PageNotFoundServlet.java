@@ -1,4 +1,4 @@
-package com.empeegee;
+package com.empeegee.servlets;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/PageNotFound")
-public class PageNotFound extends HttpServlet {
+public class PageNotFoundServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
