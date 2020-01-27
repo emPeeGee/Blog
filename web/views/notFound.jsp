@@ -9,10 +9,13 @@
 <html>
 <head>
     <title>Title</title>
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/global.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/footer.css">
 </head>
 <body>
 
-
-<jsp:include page="/views/footer.jsp" />
+    <h1>Page not found</h1>
+    <jsp:include page="/views/footer.jsp" />
 </body>
 </html>

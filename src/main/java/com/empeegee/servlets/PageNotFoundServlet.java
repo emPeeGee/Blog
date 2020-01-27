@@ -1,5 +1,6 @@
 package com.empeegee.servlets;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,8 +14,9 @@ public class PageNotFoundServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
 
-        out.println("<h1>Page not found</h1>");
+        RequestDispatcher dispatcher = getServletContext()
+                .getRequestDispatcher("/views/notFound.jsp");
+        dispatcher.forward(request, response);
     }
 }

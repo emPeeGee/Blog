@@ -9,6 +9,8 @@
 <html>
 <head>
     <title>Logout</title>
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/footer.css">
 </head>
 <body>
 

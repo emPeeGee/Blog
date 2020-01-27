@@ -17,46 +17,47 @@
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/static/img/icon.png" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/global.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css"></head>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/index.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/footer.css">
+</head>
 <body>
 
-<section id="main">
-    <div class="introduction">
-        <div class="introductionContent">
-            <ul>
-                <li>Write what is on your mind.</li>
-                <li>Hear what people are talking about. </li>
-                <li>Follow your interests. </li>
-            </ul>
+    <section id="main">
+        <div class="introduction">
+            <div class="introductionContent">
+                <ul>
+                    <li>Write what is on your mind.</li>
+                    <li>Hear what people are talking about. </li>
+                    <li>Follow your interests. </li>
+                </ul>
+            </div>
+
         </div>
 
-    </div>
+        <div class="action">
 
-    <div class="action">
+            <div class="login">
+                <form action="Authentication" method="POST">
+                    <input type="text" placeholder="Username" name="username">
+                    <input type="password" placeholder="Password" name="password">
+                    <button type="submit" value="login">Log in</button>
+                </form>
+            </div>
 
-        <div class="login">
-            <form action="Authentication" method="POST">
-                <input type="text" placeholder="Username" name="username">
-                <input type="password" placeholder="Password" name="password">
-                <button type="submit" value="login">Log in</button>
-            </form>
+            <div class="authentication">
+                <img src="${pageContext.request.contextPath}/static/img/icon.png" alt="">
+                <h2>See what’s happening in the world right now</h2>
+                <h3>Join us today</h3>
+
+                <button class="authFillBlue authButtons authMargin">Sign up</button>
+                <button class="authButtons authMargin">Log in</button>
+            </div>
+
         </div>
+    </section>
 
-        <div class="authentication">
-            <img src="${pageContext.request.contextPath}/static/img/icon.png" alt="">
-            <h2>See what’s happening in the world right now</h2>
-            <h3>Join us today</h3>
-
-            <button class="authFillBlue authButtons authMargin">Sign up</button>
-            <button class="authButtons authMargin">Log in</button>
-        </div>
-
-    </div>
-</section>
-
-<jsp:include page="/views/footer.jsp" />
+    <jsp:include page="/views/footer.jsp" />
 
 </body>
 </html>

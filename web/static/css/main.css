@@ -105,13 +105,14 @@
 }
 
 .article {
-
+    background: #f1f1f1;
+    margin: 20px 0;
+    padding: 30px 40px;
 }
 
 .articleTitle a {
     font-size: 40px;
     color: #000000;
-
 }
 
 .articleTitle:hover {
@@ -124,5 +125,49 @@
 
 .article h5 {
     text-align: center;
-    font-size: 25px;
-} 
+    font-size: 22px;
+    margin: 10px 0;
+}
+
+.article h2 {
+    margin: 10px 0;
+}
+
+/* New article */
+/* New article */
+/* New article */
+/* New article */
+
+#newArticle {
+    width: 100%;
+}
+
+#newArticle  h3{
+    margin: 10px 0;
+}
+
+.newArticleContent {
+    width: 525px;
+    margin: 0 auto;
+}
+
+.titleArticle {
+
+}
+
+#inputTitle {
+    width: 97.1%;
+    height: 30px;
+}
+
+.submitArticle input {
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    background: #1da1f2;
+    color: #ffffff;
+    font-size: 20px;
+    border: none;
+}
+
+

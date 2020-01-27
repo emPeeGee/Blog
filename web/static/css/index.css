@@ -84,33 +84,3 @@
     height: 80px;
     margin: 0 auto;
 }
-
-footer {
-    width: 100%;
-    height: 5vh;
-    background: #ffffff;
-    font-size: 14px;
-    border-top: 0.3px solid #9e9e9ecb;
-}
-
-footer ul {
-    width: 30%;
-    padding: 0;
-    margin: 0 auto;
-    line-height: 5vh;
-}
-footer ul li {
-    display: inline;
-    margin: 0 20px;
-    text-align: center;
-    
-}
-footer ul a {
-    color: #9e9e9e;
-    text-decoration: none;
-}
-
-footer ul a:hover {
-    text-decoration: underline;
-}
-

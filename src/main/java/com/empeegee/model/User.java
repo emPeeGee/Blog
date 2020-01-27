@@ -59,4 +59,8 @@ public class User {
     public void setArticles(List<Article> articles) {
         this.articles = articles;
     }
+
+    public void addArticle(Article article) {
+        articles.add(article);
+    }
 }

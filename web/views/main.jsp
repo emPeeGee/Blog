@@ -18,10 +18,10 @@
 
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/static/img/icon.png" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/global.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css">
-
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/footer.css">
 </head>
 <body>
 
@@ -68,9 +68,11 @@
     <div class="container">
 
         <div class="createWrapper">
-            <div class="createArticle">
-                +
-            </div>
+            <a href="NewArticle">
+                <div class="createArticle">
+                    +
+                </div>
+            </a>
         </div>
 
     </div>

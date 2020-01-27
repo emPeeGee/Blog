@@ -31,4 +31,8 @@ public class Repository {
         return users;
     }
 
+    public void addArticle(Article article) {
+
+    }
+
 }
