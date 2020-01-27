@@ -31,8 +31,6 @@ public class MainServlet extends HttpServlet {
         } else {
             resp.sendRedirect(req.getContextPath() + "/");
         }
-
-
-
+        
     }
 }

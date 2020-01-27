@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+p {
+    margin: 0;
+}
+ 
+a {
+    text-decoration: none;
+    color : #ffffff;
+}
+
+.red {
+    color: #b31919;
+    font-weight: bold;;
+}

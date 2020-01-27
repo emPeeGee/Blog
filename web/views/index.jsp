@@ -16,8 +16,10 @@
 
     <link rel="shortcut icon" href="${pageContext.request.contextPath}/static/img/icon.png" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/static/css/style.css"/>
-</head>
+
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/main.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/global.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/static/css/style.css"></head>
 <body>
 
 <section id="main">
@@ -54,19 +56,7 @@
     </div>
 </section>
 
-<footer>
-    <ul>
-        <a href="">
-            <li>Home</li>
-        </a>
-        <a href="">
-            <li>Terms</li>
-        </a>
-        <a href="">
-            <li>Copyright (c) emPeeGee</li>
-        </a>
-    </ul>
-</footer>
+<jsp:include page="/views/footer.jsp" />
 
 </body>
 </html>
