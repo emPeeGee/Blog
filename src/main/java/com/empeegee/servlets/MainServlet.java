@@ -3,42 +3,36 @@ package com.empeegee.servlets;
 import com.empeegee.Repository;
 import com.empeegee.model.User;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/Main")
 public class MainServlet extends HttpServlet {
 
-    private Repository repository;
+    User currentUser;
+
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        repository = new Repository();
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        currentUser = (User) session.getAttribute("currentSessionUser");
 
-        boolean exist = false;
-        PrintWriter out = resp.getWriter();
-
-        String name = req.getParameter("username");
-        String pass = req.getParameter("password");
-
-        for (User user : repository.getUsers()) {
-            if (user.getName().equals(name)) {
-                if (user.getPassword().equals(pass)) {
-                    exist = true;
-                }
-            }
-        }
-
-        if (exist) {
-            out.println("<h1> Successful </h1>");
+        if (currentUser != null) {
+            RequestDispatcher dispatcher = getServletContext()
+                    .getRequestDispatcher("/views/main.jsp");
+            dispatcher.forward(req, resp);
         } else {
-            out.println("<h1> Doesn't exists </h1>");
+            resp.sendRedirect(req.getContextPath() + "/");
         }
+
+
 
     }
 }

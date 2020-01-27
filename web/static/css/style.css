@@ -10,7 +10,7 @@
 }
 
 .authMargin {
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 .authFillBlue {
@@ -19,8 +19,8 @@
 }
 
 body {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: 'Roboto', sans-serif;
 
 }
@@ -64,10 +64,10 @@ body {
 .login input {
     width: 39%;
     height: 40px;
-    padding: 0px 10px;
+    padding: 0 10px;
     border: 1px solid #2f83e4;
     border-radius: 4px;
-    margin: 0px 4px;
+    margin: 0 4px;
     
 }
 
@@ -83,13 +83,13 @@ body {
 
 .authentication {
     width: 60%;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 .authentication img {
     width: 80px;
     height: 80px;
-    margin: 0px auto;
+    margin: 0 auto;
 }
 
 footer {
@@ -102,13 +102,13 @@ footer {
 
 footer ul {
     width: 30%;
-    padding: 0px;
-    margin: 0px auto;
+    padding: 0;
+    margin: 0 auto;
     line-height: 5vh;
 }
 footer ul li {
     display: inline;
-    margin: 0px 20px;
+    margin: 0 20px;
     text-align: center;
     
 }

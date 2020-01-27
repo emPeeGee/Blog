@@ -35,7 +35,7 @@
     <div class="action">
 
         <div class="login">
-            <form action="Main" method="POST">
+            <form action="Authentication" method="POST">
                 <input type="text" placeholder="Username" name="username">
                 <input type="password" placeholder="Password" name="password">
                 <button type="submit" value="login">Log in</button>

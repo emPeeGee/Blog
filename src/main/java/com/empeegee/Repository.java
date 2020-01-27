@@ -19,6 +19,12 @@ public class Repository {
                 new Article(2, "Vasea", "gsadsa", new Date()),
                 new Article(3, "Ivanca", "dsadsadsa", new Date()))))
         );
+
+        users.add(new User(22778, "Vlad", "2222", Role.ROLE_USER, new ArrayList(Arrays.asList(
+                new Article(1, "Carlos", "Haha", new Date()),
+                new Article(2, "Milos", "gsadsa", new Date()),
+                new Article(3, "Chsinau", "dsadsadsa", new Date()))))
+        );
     }
 
     public List<User> getUsers() {

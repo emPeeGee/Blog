@@ -12,9 +12,11 @@ public class IndexServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       // response.sendRedirect("views/index.jsp");
-        request.getRequestDispatcher("views/index.jsp").forward(request, response);
-
+        request.getRequestDispatcher("/views/index.jsp").forward(request, response);
     }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
+    }
 }
