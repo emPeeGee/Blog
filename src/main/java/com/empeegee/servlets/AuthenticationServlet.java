@@ -18,11 +18,6 @@ public class AuthenticationServlet extends HttpServlet {
 
     private Repository repository;
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter out = resp.getWriter();
-        out.println("<h1>dsa</h1>");
-    }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
