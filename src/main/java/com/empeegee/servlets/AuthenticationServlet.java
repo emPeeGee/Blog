@@ -28,29 +28,18 @@ public class AuthenticationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         repository = new Repository();
 
-        boolean exist = false;
-        PrintWriter out = resp.getWriter();
-
         String name = req.getParameter("username");
         String pass = req.getParameter("password");
-        User user = null;
+        User user = repository.getUserOrNull(name, pass);
 
-        for (User u : repository.getUsers()) {
-            if (u.getName().equals(name)) {
-                if (u.getPassword().equals(pass)) {
-                    exist = true;
-                    user = u;
-                    break;
-                }
-            }
-        }
 
-        if (exist) {
+        if (user != null) {
             HttpSession session = req.getSession(true);
             session.setAttribute("currentSessionUser", user);
             resp.sendRedirect(req.getContextPath() + "/Main");
         } else {
-            out.println("<h1> Doesn't exists </h1>");
+            RequestDispatcher dispatcher = req.getRequestDispatcher("views/userNotFound.jsp");
+            dispatcher.forward(req, resp);
         }
 
     }

@@ -31,8 +31,17 @@ public class Repository {
         return users;
     }
 
-    public void addArticle(Article article) {
 
+    public User getUserOrNull(String name, String pass) {
+        for (User user : getUsers()) {
+            if (user.getName().equals(name)) {
+                if (user.getPassword().equals(pass)) {
+                    return user;
+                }
+            }
+        }
+
+        return null;
     }
 
 }
