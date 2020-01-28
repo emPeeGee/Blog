@@ -83,10 +83,9 @@
 <section id="feed">
 
     <div class="container">
-        <%
-            for (Article article : currentUser.getArticles()) { %>
+        <% for (Article article : currentUser.getArticles()) { %>
         <section class="article">
-            <h2 class="articleTitle"><a href=""> <%= article.getTitle()%> </a></h2>
+            <h2 class="articleTitle"><a href="Main/Article?id=<%= article.getId()%>"> <%= article.getTitle()%> </a></h2>
 
             <p>  <%= article.getText()%> </p>
 

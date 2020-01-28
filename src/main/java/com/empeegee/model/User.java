@@ -63,4 +63,14 @@ public class User {
     public void addArticle(Article article) {
         articles.add(article);
     }
+
+    public Article getArticleById(int id) {
+        for (Article article : articles){
+            if (article.getId() == id) {
+                return article;
+            }
+        }
+
+        return null;
+    }
 }
